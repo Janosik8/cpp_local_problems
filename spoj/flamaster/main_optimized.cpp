@@ -37,7 +37,7 @@ int main(){
                                         slowo_skrocone += slowo[i-1];
                                     }else slowo_skrocone += slowo[i];
                            }
-                           //cout<<slowo_skrocone;
+                           
                         }
                 }
     else{
