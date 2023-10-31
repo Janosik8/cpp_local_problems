@@ -9,7 +9,7 @@ int main(){
         {
             cin>>podstawa>>wykladnik;
             podstawa %= 10;
-            int wynik = podstawa;// 2 1 -> 2 | 2 2 -> 4 | 2 3 -> 8 | 2 4 -> 6 
+            int wynik = podstawa;
             wykladnik--;
             wykladnik %= 4;
             if (wykladnik > 0) {
