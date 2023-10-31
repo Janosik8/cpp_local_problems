@@ -1,11 +1,6 @@
 #include <iostream>
 using namespace std;
 
-int potegowanie(int x, int y){
-    if(y == 0) return 1;
-    else return potegowanie(x, y-1)*x;
-}
-
 int main(){
         int x, podstawa, wykladnik;
         cin>>x;
@@ -13,7 +8,19 @@ int main(){
         while (x--)
         {
             cin>>podstawa>>wykladnik;
-            cout<<potegowanie(podstawa, wykladnik)<<endl; 
+            podstawa %= 10;
+            int wynik = podstawa;// 2 1 -> 2 | 2 2 -> 4 | 2 3 -> 8 | 2 4 -> 6 
+            wykladnik--;
+            wykladnik %= 4;
+            if (wykladnik > 0) {
+            for (int i = 0 ; i < wykladnik; i++) {
+                wynik *= podstawa;
+            }
+                wynik %= 10;
+                cout<<wynik<<endl;
+            }else{
+                cout<<podstawa<<endl;
+            }
         }
         
 
