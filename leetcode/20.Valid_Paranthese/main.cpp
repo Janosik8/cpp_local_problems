@@ -4,22 +4,17 @@ using namespace std;
 
 bool isValid(string s) {
     stack<char> stack_of_brackets;
-   for(int i = 0; i < s.length(); i++) {
-
-    if(s[i] == '{' || s[i] == '[' || s[i] == '('){
-        stack_of_brackets.push(s[i]);
-    }else if(!stack_of_brackets.empty()){
-        switch (s[i])
-        {
-        case ')': if (stack_of_brackets.top() == '(') stack_of_brackets.pop(); else return false; break;
-        case '}': if (stack_of_brackets.top() == '{') stack_of_brackets.pop(); else return false; break;
-        case ']': if (stack_of_brackets.top() == '[') stack_of_brackets.pop(); else return false; break;
-        default: return false; 
-        }
-    }else return false;
-}
-    if(!stack_of_brackets.empty()) return false;
-        return true;
+    for(char character : s) {
+        if(character == '{' || character == '[' || character == '(') {
+            stack_of_brackets.push(character);
+        } else if(stack_of_brackets.empty() || 
+            (character == '}' && stack_of_brackets.top() != '{')|| 
+            (character == ']' && stack_of_brackets.top() != '[') ||
+            (character == ')' && stack_of_brackets.top() != '(')) {
+                return false;
+            }else stack_of_brackets.pop();
+    }       
+    return stack_of_brackets.empty();
 }
 
 
