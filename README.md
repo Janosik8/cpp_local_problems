@@ -8,7 +8,7 @@ This repository is structured by problem domains and includes a mix of classic a
 
 ## How to Use This Repository
 
-1. **Identify the Problem:** Start by searching for a specific problem on the site it originates from (e.g., LeetCode, HackerRank). This approach ensures you understand the problem's context, constraints, and objectives before diving into the solution.
+1. **Identify the Problem:** Start by searching for a specific problem on the site it originates from (e.g., LeetCode, AdventOfCode). This approach ensures you understand the problem's context, constraints, and objectives before diving into the solution.
 
 2. **Attempt to Solve:** Give the problem a try on your own. Applying your knowledge and attempting to solve it independently is a great way to enhance your problem-solving skills.
 
