@@ -32,7 +32,7 @@
 *.app
 
 # various IDEs
-.DS_Store                # Cruft from MacOS Finder
+*.DS_Store                # Cruft from MacOS Finder
 Thumbs.db                # Cruft from Windows Explorer
 
 .project                 # I think this is Eclipse but not certain
